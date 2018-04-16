@@ -68,3 +68,8 @@
   \lhead{#1}
   \cfoot{\thepage}
 }
+\newcommand{\cimg}[1]{
+  \begin{center}
+    \includegraphics[width=250px]{figs/#1}
+  \end{center}
+}
