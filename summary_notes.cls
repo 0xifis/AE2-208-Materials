@@ -18,6 +18,7 @@
 \RequirePackage[ddmmyy]{datetime}
 \RequirePackage{newclude}
 \RequirePackage{fancyhdr}
+\RequirePackage{multicol}
 
 % Hyperlinks/Bookmarks in TOC
 \RequirePackage[pagebackref]{hyperref}
@@ -70,6 +71,6 @@
 }
 \newcommand{\cimg}[1]{
   \begin{center}
-    \includegraphics[width=250px]{figs/#1}
+    \includegraphics[width=\linewidth]{figs/#1}
   \end{center}
 }
