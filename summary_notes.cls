@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{summary_notes}[2018/01/11 Latex Class for Simple Module Summary Notes. Works better with <3.]
 
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[left=1.2cm,right=1.2cm,top=2.2cm,bottom=1.6cm]{geometry}
 \RequirePackage{setspace}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -19,7 +19,9 @@
 \RequirePackage[ddmmyy]{datetime}
 \RequirePackage{newclude}
 \RequirePackage{fancyhdr}
+
 \RequirePackage{multicol}
+\setlength{\columnsep}{1cm}
 
 % Hyperlinks/Bookmarks in TOC
 \RequirePackage[pagebackref]{hyperref}
