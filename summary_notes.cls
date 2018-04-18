@@ -12,6 +12,7 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{mparhack}
 \RequirePackage{graphicx}
+\RequirePackage{gensymb}
 \RequirePackage{ar}
 \graphicspath{ {figs/} }
 \RequirePackage{commath}
