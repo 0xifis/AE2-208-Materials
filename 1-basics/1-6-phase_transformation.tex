@@ -1,0 +1,256 @@
+\section{Phase Transformation} % (fold)
+\label{sec:phase_transformation}
+
+\subsection{Energetics} % (fold)
+\label{sub:energetics}
+
+\subsubsection{Gibbs Free Energy}
+The Gibbs free energy, $G$, is the maximum amount of non-expansion work that can be extracted from a thermodynamically closed system (in a reversible process).
+\begin{equation}
+  G = U + pV - TS = H -TS
+\end{equation}
+
+In other to determine the likelihood of a transformation, the free work available must be determined as
+\begin{equation}
+  W_f = -(G_{final} - G_{initial}) = - \Delta G
+\end{equation}
+For phase transformations to occur,
+\begin{equation}
+  W_F > 0 \qquad\text{or}\qquad \Delta G < 0
+\end{equation}
+Thus, some processes are possible above a certain temperature or vice versa. The larger the magnitude of $W_f$, the larger the driving force for the phase transformation.
+
+\subsubsection{Precipitation of Bigger Particles}
+If 2 spherical grains of radius, $r_1$ and $r_2$, combined to form a bigger grain of radius, $r_3$, the $\Delta G$ of the transformation can be defined as
+\begin{align}
+  \Delta G &= (A\gamma)_{final} - (A\gamma)_{initial} \\
+  &= (\frac{4}{3}\pi r_3^2\gamma) - (\frac{4}{3}\pi r_2^2\gamma) - (\frac{4}{3}\pi r_1^2\gamma)
+\end{align}
+Because volume is conserved, $r_3$ can be determined.
+\begin{equation}
+  r_3^2 = (r_2^3+r_1^3)^\frac{2}{3}
+\end{equation}
+Therefore,
+\begin{equation}
+  \Delta G = \frac{4}{3}\pi\gamma \left[(r_2^3+r_1^3)^\frac{2}{3} - r^2_2 - r^2_1 \right]
+\end{equation}
+Much Math shows that this will be negative, showing that this drives the coarsening process.
+\subsubsection{Equilibrium Temperature}
+At equilibrium, $\Delta G = 0$,
+\begin{equation}
+  0 = \Delta H - T_e\Delta S \rightarrow T_e = -\frac{\Delta H}{\Delta S}
+\end{equation}
+We can also determine the change in Gibbs energy (driving force) with small change in $T$ at the $T_e$.
+\begin{equation}
+\Delta G = \Delta H \frac{T_e - T}{T_e}  
+\end{equation}
+% subsection energetics (end)
+
+\subsection{Kinetics} % (fold)
+\label{sub:kinetics}
+A reaction that is energetically favourable may not necessarily be possible from a kinetics perspective. 
+
+Good thing, Mr Maxwell and Mr Boltzmann helped us out here.
+
+\begin{equation}
+  p =  e^{-\frac{mv}{2kt}} = e^{-\frac{q}{kt}}
+\end{equation}
+where $p$ is the probability of an atom to change state (which reduces as temperature reduces).
+
+From the intersection of the energetics and kinetics temperature curves, you can get the ideal temperature.
+\cimg{maxwell_boltzmann}
+% subsection kinetics (end)
+
+\subsection{Diffusion-Controlled Phase Transformation} % (fold)
+\label{sub:diffusion_controlled_phase_transformation}
+
+This mechanism of phase transformation occurs through diffusion of solute away from a growing phase (eg. carbon steel).
+
+\subsubsection{Cooling Steel Below Eutectoid Point}
+\begin{equation}
+  \gamma_\text{fcc iron} \xrightarrow{723\degree C} \alpha_\text{bcc iron} + Fe_3C
+\end{equation}
+Phase composition:
+\begin{itemize}
+  \item $\gamma_\text{fcc iron}$ has 0.80wt\% C
+  \item $\alpha_\text{bcc iron}$ has 0.035wt\% C
+  \item $Fe_3C$ has 6.67wt\% C
+\end{itemize}
+
+In the transformation, $\gamma$ loses carbon atoms to $\alpha$ and $Fe_3C$ by diffusion (rate limiting factor). 
+\cimg{iron_to_steel}
+Also as a result, the solidification of single-phase alloys results in dendritic appearance that helps in the diffusion of the solute.
+% subsection diffusion_controlled_phase_transformation (end)
+
+\subsection{Nucleation} % (fold)
+\label{sub:nucleation}
+\subsubsection{Homogeneous Nucleation}
+Homogeneous nucleation occurs when the only atoms involved are those of the material itself (ie. not impurities or 3rd party materials). As in the case of solidification.
+\cimg{homo_nucleation}
+
+To form the nucleus above with radius, $r$,
+\begin{equation}
+  \Delta G = - \left( \frac{4}{3}r^3\right)\Delta H \frac{T_e-T}{T_e}
+\end{equation}
+
+However, work needs to be done to form the surface, defined as
+\begin{equation}
+  \gamma_{surface} = \gamma_{sl}A = 4\pi r^2\gamma_{sl}
+\end{equation}
+Putting them together,
+\begin{equation}
+  W_f = 4\pi r^2\gamma_{sl} - \left( \frac{4}{3}r^3\right)\Delta H \frac{T_e-T}{T_e} > 0
+\end{equation}
+
+We can then find when $W_f$ is maximised at critical radius, $r^*$ by differentiating it by $r$.
+
+After much math, we get,
+\begin{equation}
+  r^* = \frac{2\gamma_{sl}T_e}{\Delta H (T_e - T)} = \frac{2\gamma_{sl}T_e}{\Delta H (\Delta T)}
+\end{equation}
+
+Boom! However, you will realise that massive undercooling is required for homogeneous nucleation! Don't worry, I have got you.
+
+\subsubsection{Heterogeneous Nucleation}
+Heterogeneous nucleation occurs on the surface of a solid catalyst. This occurs when there is a strong tendency for the crystal to stick to the surface of the catalyst and this tendency is described the angle of contact, $theta$. 
+
+\cimg{hetero_nucleation}
+
+Similar to homogeneous nucleation, the process can be thought of in terms of energetics - Gibbs free energy and interfacial energy
+
+\textbf{Geometry}
+\begin{itemize}
+  \item Nucleus volume
+  \begin{equation}
+    V_n = \frac{2\pi r^3}{3}\left[1- \frac{3}{2}\cos\theta+\frac{1}{2}\cos^3\theta\right]
+  \end{equation}
+  \item Surface area at solid-liquid interface
+  \begin{equation}
+    A_{sl} = 2\pi r^2 (1 - \cos\theta)
+  \end{equation}
+  \item Surface area at catalyst-solid interface
+  \begin{equation}
+    A_{cs} = \pi r^2 (1 - \cos^2\theta)
+  \end{equation}
+\end{itemize}
+\textbf{Energy Equations}
+\begin{itemize}
+  \item Gibbs free energy
+  \begin{equation}
+    \Delta G = V_n|\Delta H|\frac{T_e - T}{T_e}
+  \end{equation}
+  \item Energy consumed from making SL surface
+  \begin{equation}
+    E_{sl} = A_{sl}\gamma_{sl} = 2\pi r^2 (1 - \cos\theta)\gamma_{sl}
+  \end{equation}
+  \item Energy consumed from making CS surface
+  \begin{equation}
+    E_{cs} = A_{cs}\gamma_{cs} = \pi r^2 (1 - \cos^2\theta)\gamma_{cs}
+  \end{equation}
+  \item Energy released from destroying CL surface
+  \begin{equation}
+    E_{cl} = A_{cs}\gamma_{cl} = \pi r^2 (1 - \cos^2\theta)\gamma_{cl}
+  \end{equation}
+\end{itemize}
+
+Putting them altogether, we can get the free energy,
+\begin{equation}
+  W_f = E_{sl} + E_{cs} - E_{cl} - \Delta G
+\end{equation}
+
+Using this relation,
+\begin{equation}
+  \gamma_{cl} = \gamma_{cs} + \gamma_{sl}\cos\theta
+\end{equation}
+$W_f$ reduces to
+\begin{equation}
+  W_f = \left[\frac{3}{2}\cos\theta+\frac{1}{2}\cos^3\theta\right]\left[2\pi^2\gamma_{sl} - \frac{2\pi^3}{3}|\Delta H| \frac{T_e-T}{T_e}\right]
+\end{equation}
+Again, differentiate above to get the critical radius,
+\begin{equation}
+  r^*_{hetero} = \frac{2\gamma_{sl}T_e}{\Delta H (T_e - T)} = r^*_{homo}
+\end{equation}
+But but but how is it the same! Well although the radii are the same, the critical volume for heterogeneous nucleation is smaller than that for the homogeneous case. Aha!
+% subsection nucleation (end)
+
+\subsection{Nucleation and DCT in Iron} % (fold)
+\label{sub:nucleation_and_dct_in_iron}
+
+Iron changes from $fcc$ to $bcc$ at $T_e = 914\degree C$.
+
+\subsubsection{Nucleation}
+
+\cimg{iron_nucleation}
+
+When temperature hits below $914\degree C$, we know that the nuclei of the BCC iron will start to form. As the temperature decreases further
+\begin{enumerate}
+   \item $T_e - T$ gets larger
+   \item $r^*$ decreases and critical volume reduces
+   \item $bcc$ nuclei forms faster as less atoms needed
+ \end{enumerate}
+
+ However, when the temperature gets too low, it becomes increasingly difficult for atoms to diffuse together to form a nucleus (Kinetics).
+
+\subsubsection{Diffusion Controlled Transformation}
+
+\cimg{iron_dct}
+
+As the number of $bcc$ nuclei grows, the diffusive process explained in Section \ref{sub:diffusion_controlled_phase_transformation} takes over.
+
+Similar to nucleation, energetics and kinetics factors give rise to a rate distribution.
+
+\subsubsection{Overall Rate of Transformation}
+
+
+Transformation Rate $\propto$ Number of $\alpha$ bcc nuclei $\times$ Growth rate of bcc-fcc interface
+
+\cimg{iron_overall}
+
+Hence, it can be seen that time taken for formation is dependent on temperature.
+
+From this, we can plot the time-temperature-transformation plot (TTT). This gives us a clear idea of how the transformation will progress with time and temperature.
+
+\cimg{iron_ttt}
+
+Although, theoretically, iron turns to bcc from fcc below $914\degree C$, it is possible to get fcc iron if we cool fast enough such that the cooling line never touches the bcc region on the TTT. This is called quenching.
+
+\cimg{iron_quench}
+
+\textbf{However}, it is still not possible to achieve fcc iron at RTP because the driving force for the reverse process is so high that another process, Displacive Transformation, causes the fcc iron to transform to bcc.
+
+*Queue amazing, timely transition.
+
+
+% subsection nucleation_and_dct_in_iron (end)
+
+\subsection{Displacive Transformation} % (fold)
+\label{sub:displace}
+
+When displacive transformation occurs, small lens-shaped grains of bcc start to nucleate at fcc grain boundaries and move across the grains at speeds approaching the speed of sound in iron. In the ‘switch zone’, atomic bonds are broken and remade in such a way that the structure ‘switches’ from fcc to bcc.
+
+\cimg{displacive_lens}
+The bcc lens-like intrusions into the fcc iron are called martensite.
+
+Why this happen is really because of the coherence between the bcc martensite lenses and the parent fcc lattice. To get bcc from fcc, we just need simply a change in orientation (see diagram). Hence the orientation of the martensite is such that it occurs at {110} plane with respect to the martensite lattice and {111} with respect to the parent fcc lattice.
+
+\cimg{displacive_process}
+
+The slight disorientation meant that there is strain at this interphase boundary. As the martensite lattice grow, it distorts the parent lattice and some of the driving force for the fcc-bcc transformation is consumed as strain energy, and eventually, this transformation will stop unless the metal is cooled continuously and quickly.
+
+Martensite is fully formed when the metal is cooled down to $350\degree C$. The following diagram shows how the straining occurs and the lens is oriented.
+
+\cimg{martensite_structure}
+
+% subsection displace (end)
+
+\subsection{TTT of Iron} % (fold)
+\label{sub:ttt_of_iron}
+
+And hence, we finally have the accurate version of TTT for iron after considering displacive transformation
+
+\cimg{iron_complete}
+
+% subsection ttt_of_iron (end)
+
+
+% section phase_transformation (end)
