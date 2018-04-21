@@ -19,6 +19,7 @@
 \RequirePackage[ddmmyy]{datetime}
 \RequirePackage{newclude}
 \RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
 
 \RequirePackage{multicol}
 \setlength{\columnsep}{1cm}
