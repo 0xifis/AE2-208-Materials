@@ -1,5 +1,9 @@
 These notes are based on the __AE2-208: Materials__ module lectures and handouts by _Dr. Qianqian Li_ and _Prof. Emile S Greenhalgh_ from the Faculty of Engineering, Department of Aeronautics, Imperial College London.
 
+There is also extensive use of content from the recommended texts:
+1. Engineering Materials 1 _4th Editions_ - Michael F. Ashby, David R. H. Jones
+2. Engineering Materials 2 _4th Editions_ - Michael F. Ashby, David R. H. Jones
+
 There is no assurance that information contained here are error-free. Users are reminded to use at your own discretion. 
 
 ### Course Outline
