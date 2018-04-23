@@ -20,6 +20,10 @@
 \RequirePackage{newclude}
 \RequirePackage{fancyhdr}
 \RequirePackage{enumitem}
+\RequirePackage{float}
+\RequirePackage{pbox}
+\RequirePackage{array}
+\RequirePackage{xargs}
 
 \RequirePackage{multicol}
 \setlength{\columnsep}{1cm}
@@ -73,8 +77,12 @@
   \lhead{#1}
   \cfoot{\thepage}
 }
-\newcommand{\cimg}[1]{
+\newcommand{\cimg}[2][]{
   \begin{center}
-    \includegraphics[width=\linewidth]{figs/#1}
+    \ifthenelse{\equal{#1}{}}{
+      \includegraphics[width=\linewidth]{figs/#2}
+    }{
+      \includegraphics[width=#1]{figs/#2}
+    }
   \end{center}
 }
