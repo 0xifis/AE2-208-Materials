@@ -75,7 +75,8 @@
   \fancyhf{}
   \rhead{#2}
   \lhead{#1}
-  \cfoot{\thepage}
+  % \cfoot{\thepage}
+  \fancyfoot[L,R,C]{}
 }
 \newcommand{\cimg}[2][]{
   \begin{center}
