@@ -1,8 +1,8 @@
-\LoadClass[11pt, oneside]{report}
+\LoadClass[11pt, twoside]{report}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{summary_notes}[2018/01/11 Latex Class for Simple Module Summary Notes. Works better with <3.]
 
-\RequirePackage[left=1.2cm,right=1.2cm,top=2.2cm,bottom=1.6cm]{geometry}
+\RequirePackage[left=1.2cm,right=1.2cm,top=2.2cm,bottom=2cm]{geometry}
 \RequirePackage{setspace}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -70,13 +70,17 @@
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\hspace{3pt}\right\rbrace\hspace{5pt}}
+
+
 \newcommand{\makeheader}[2]{
-  \pagestyle{fancy}
+  \pagestyle{fancy}{
   \fancyhf{}
-  \rhead{#2}
-  \lhead{#1}
-  % \cfoot{\thepage}
-  \fancyfoot[L,R,C]{}
+  \fancyhead[L]{\slshape \leftmark}
+  \fancyhead[R]{\slshape #2}
+  \fancyfoot[C]{\thepage}
+  \fancyfoot[LE]{\textbf{Leaving your home empty this summer?}\\Sublet hassle-free on www.uteepi.com}
+  \fancyfoot[RO]{\textbf{Know someone who wants to sublet?}\\Refer your friend and get \textsterling20 each}
+  }
 }
 \newcommand{\cimg}[2][]{
   \begin{center}
@@ -87,3 +91,4 @@
     }
   \end{center}
 }
+
